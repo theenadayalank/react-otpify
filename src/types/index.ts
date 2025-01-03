@@ -5,5 +5,4 @@ export interface OtpInputProps {
   placeholder?: string;
   error?: boolean;
   disabled?: boolean;
-  label?: string;
 }

@@ -1,14 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./OtpInput.css";
+import { OtpInputProps } from "../types";
 
-interface OtpInputProps {
-  length: number;
-  onChange?: (otp: string) => void;
-  onSubmit?: (otp: string) => void;
-  placeholder?: string;
-  error?: boolean;
-  disabled?: boolean;
-}
+import "./OtpInput.css";
 
 const OtpInput = ({
   length,
@@ -93,12 +86,12 @@ const OtpInput = ({
 
   return (
     <div className={`otp-input-container ${error ? "error" : ""}`}>
-      {otpValues.map((value, index) => (
+      {otpValues.map((value: any, index: any) => (
         <input
           key={`otp-input-${index}`}
           type="text"
           className={`otp-input ${error ? "error" : ""}`}
-          ref={(el) => (otpRefs.current[index] = el!)}
+          ref={(el) => (otpRefs.current[index] = el! as any)}
           value={value}
           onChange={(e) => handleChange(index, e)}
           onKeyDown={(e) => handleKeyDown(index, e)}
