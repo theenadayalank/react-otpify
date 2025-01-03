@@ -1,9 +1,8 @@
-
-# react-otpify
+# react-otpify 🔒✨
 
 `react-otpify` is a customizable and accessible React component for handling OTP (One-Time Password) input. It allows users to input OTPs of a specified length, supports automatic focus management, error handling, and more. It is designed with flexibility, ease of use, and accessibility in mind.
 
-## Features
+## Features 🚀
 
 - **Customizable Length**: Specify the length of the OTP input field.
 - **Focus Management**: Automatically focuses the next input field after entering a digit.
@@ -15,7 +14,7 @@
 - **Custom Placeholder**: Allows customization of the placeholder text.
 - **Accessibility**: Includes proper ARIA attributes for better accessibility.
 
-## Installation
+## Installation 📦
 
 To install `react-otpify`, you can use npm or yarn:
 
@@ -27,7 +26,7 @@ yarn add react-otpify
 
 ## Usage
 
-### Basic Example
+### Basic Example 🖥️
 
 ```tsx
 import React, { useState } from "react";
@@ -63,16 +62,16 @@ const App = () => {
 export default App;
 ```
 
-### Props
+### Props 📋
 
-| Prop         | Type                     | Default | Description                                                                                  |
-|--------------|--------------------------|---------|----------------------------------------------------------------------------------------------|
-| `length`     | `number`                 | `6`     | The length of the OTP input field.                                                           |
-| `onChange`   | `(otpString: string) => void` | `-`     | A callback function that is called whenever the OTP value changes.                           |
-| `onSubmit`   | `(otpString: string) => void` | `-`     | A callback function that is called when all OTP fields are filled.                           |
-| `placeholder`| `string`                 | `"-"`   | The placeholder text for each OTP input field.                                               |
-| `error`      | `boolean`                | `false` | If `true`, applies an error style to the input fields.                                       |
-| `disabled`   | `boolean`                | `false` | If `true`, disables all OTP input fields.                                                    |
+| Prop          | Type                          | Default | Description                                                        |
+| ------------- | ----------------------------- | ------- | ------------------------------------------------------------------ |
+| `length`      | `number`                      | `6`     | The length of the OTP input field.                                 |
+| `onChange`    | `(otpString: string) => void` | `-`     | A callback function that is called whenever the OTP value changes. |
+| `onSubmit`    | `(otpString: string) => void` | `-`     | A callback function that is called when all OTP fields are filled. |
+| `placeholder` | `string`                      | `"-"`   | The placeholder text for each OTP input field.                     |
+| `error`       | `boolean`                     | `false` | If `true`, applies an error style to the input fields.             |
+| `disabled`    | `boolean`                     | `false` | If `true`, disables all OTP input fields.                          |
 
 ### Advanced Example
 
@@ -121,7 +120,7 @@ export default AdvancedApp;
 - **ARIA Attributes**: The component includes `aria-invalid` and `aria-disabled` attributes to improve accessibility for screen readers.
 - **Focus Management**: The component automatically manages focus to improve user experience, especially when pasting OTPs or using the backspace key.
 
-### Custom Styling
+### Custom Styling 🎨
 
 You can customize the styles of the OTP input fields by modifying the `OtpInput.css` file. Here's a basic example:
 
@@ -200,7 +199,7 @@ To disable the OTP inputs, simply set the `disabled` prop to `true`:
 />
 ```
 
-### Testing
+### Testing 🧪
 
 The component can be tested using Jest. Here's an example of a test case for the component:
 
@@ -221,8 +220,8 @@ test("OTP input changes and submits correctly", () => {
     />
   );
 
-  const inputs = Array.from({ length: 6 }).map((_, index) =>
-    getByPlaceholderText("-")[index]
+  const inputs = Array.from({ length: 6 }).map(
+    (_, index) => getByPlaceholderText("-")[index]
   );
 
   fireEvent.change(inputs[0], { target: { value: "1" } });
@@ -235,10 +234,10 @@ test("OTP input changes and submits correctly", () => {
 });
 ```
 
-## Contributing
+## Contributing 🤝
 
 We welcome contributions! To contribute, please fork this repository, create a new branch, and submit a pull request. Be sure to follow the coding standards and include tests for any new features.
 
-## License
+## License 📜
 
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).

@@ -4,7 +4,7 @@ import { OtpInputProps } from "../types";
 import "./OtpInput.css";
 
 const OtpInput = ({
-  length,
+  length = 6,
   onChange,
   onSubmit,
   placeholder = "-",
