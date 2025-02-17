@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { OtpInputProps } from "../types";
 
+import { OtpInputProps } from "../types";
 import "./OtpInput.css";
 
 const OtpInput = ({

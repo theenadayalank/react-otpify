@@ -8,10 +8,11 @@ export default defineConfig({
   plugins: [react(), dts({ rollupTypes: true })],
   server: {
     port: 3000,
+    open: "/docs/index.html",
   },
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: resolve(__dirname, "lib/index.ts"),
       name: "ReactOtpify",
       fileName: (format) => `react-otpify.${format}.js`,
     },
