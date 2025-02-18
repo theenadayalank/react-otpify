@@ -1,5 +1,6 @@
 node_modules
-src
+docs
+lib
 eslint.config.js
 jest.config.js
 package-lock.json
@@ -9,3 +10,4 @@ dist-docs
 
 .github
 .gitignore
+.husky
