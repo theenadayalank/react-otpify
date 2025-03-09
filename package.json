@@ -1,7 +1,8 @@
 {
   "name": "react-otpify",
-  "version": "0.0.1",
-  "description": "A reusable OTP input component for React with accessibility and customization options.",
+  "version": "0.0.2",
+  "description": "A customizable and accessible OTP (One-Time Password) input component for React",
+  "type": "module",
   "main": "dist/react-otpify.umd.js",
   "module": "dist/react-otpify.es.js",
   "types": "dist/react-otpify.d.ts",
@@ -9,40 +10,70 @@
     "dist"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "test": "jest",
-    "start": "vite preview"
+    "lint": "eslint",
+    "test": "echo \"No tests configured yet\" && exit 0",
+    "start": "vite --config vite.docs.config.js",
+    "build": "npm run build:lib && npm run build:docs",
+    "build:lib": "vite build",
+    "build:docs": "vite build --config vite.docs.config.js"
+  },
+  "lint-prepush": {
+    "lib/**/*.{js,jsx,ts,tsx}": [
+      "eslint"
+    ],
+    "docs/**/*.{js,jsx,ts,tsx}": [
+      "eslint"
+    ]
   },
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
-    "@types/jest": "^29.5.14",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
+    "@eslint/js": "^9.20.0",
+    "@types/react": "^19.0.6",
+    "@types/react-dom": "^19.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
     "@vitejs/plugin-react": "^3.0.0",
-    "eslint": "^9.17.0",
+    "eslint": "^9.20.1",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
-    "jest": "^28.1.3",
-    "jest-environment-jsdom": "^29.7.0",
+    "husky": "^9.1.7",
+    "lint-prepush": "^3.0.2",
     "typescript": "^4.9.5",
-    "typescript-eslint": "^8.19.0",
+    "typescript-eslint": "^8.24.1",
     "vite": "^4.0.0",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
     "vite-plugin-dts": "^4.4.0"
   },
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "author": "Theenadayalan Kaliamurthy (https://github.com/theenadayalank)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/theenadayalank/react-otpify"
-  }
+    "url": "git+https://github.com/theenadayalank/react-otpify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theenadayalank/react-otpify/issues"
+  },
+  "homepage": "https://github.com/theenadayalank/react-otpify#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "otp",
+    "react",
+    "input",
+    "authentication",
+    "component"
+  ]
 }

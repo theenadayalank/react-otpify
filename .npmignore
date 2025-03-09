@@ -1,11 +1,13 @@
 node_modules
-src
+docs
+lib
 eslint.config.js
 jest.config.js
 package-lock.json
 tsconfig.json
 vite.config.ts
-
+dist-docs
 
 .github
 .gitignore
+.husky

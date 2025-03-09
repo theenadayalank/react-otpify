@@ -2,17 +2,15 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 import react from "@vitejs/plugin-react";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [react(), dts({ rollupTypes: true })],
-  server: {
-    port: 3000,
-  },
+  plugins: [react(), cssInjectedByJsPlugin(), dts({ rollupTypes: true })],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
-      name: "ReactOtpify",
+      entry: resolve(__dirname, "lib/index.ts"),
+      name: "react-otpify",
       fileName: (format) => `react-otpify.${format}.js`,
     },
     rollupOptions: {
@@ -25,5 +23,6 @@ export default defineConfig({
         },
       },
     },
+    emptyOutDir: true,
   },
 });

@@ -15,19 +15,19 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "18"
           registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Build the project
-        run: yarn build
+        run: npm run build
 
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn publish --access public
+        run: npm publish --access public
 
       - name: Clean up npm token
-        run: yarn logout
+        run: npm logout
