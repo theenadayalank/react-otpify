@@ -1,7 +1,7 @@
 {
   "name": "react-otpify",
   "version": "0.0.1",
-  "description": "A reusable OTP input component for React with accessibility and customization options.",
+  "description": "A customizable and accessible OTP (One-Time Password) input component for React",
   "type": "module",
   "main": "dist/react-otpify.umd.js",
   "module": "dist/react-otpify.es.js",
@@ -12,11 +12,12 @@
   "scripts": {
     "lint": "eslint",
     "test": "echo \"No tests configured yet\" && exit 0",
-    "start": "vite",
-    "build": "vite build"
+    "start": "vite --config vite.docs.config.js",
+    "build:lib": "vite build",
+    "build:docs": "vite build --config vite.docs.config.js",
+    "deploy": "gh-pages -d dist-docs"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -34,11 +35,15 @@
     "typescript": "^4.9.5",
     "typescript-eslint": "^8.24.1",
     "vite": "^4.0.0",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
     "vite-plugin-dts": "^4.4.0"
   },
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "author": "Theenadayalan Kaliamurthy (https://github.com/theenadayalank)",
   "license": "MIT",
@@ -46,7 +51,19 @@
     "type": "git",
     "url": "git+https://github.com/theenadayalank/react-otpify.git"
   },
+  "bugs": {
+    "url": "https://github.com/theenadayalank/react-otpify/issues"
+  },
+  "homepage": "https://github.com/theenadayalank/react-otpify#readme",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "otp",
+    "react",
+    "input",
+    "authentication",
+    "component"
+  ]
 }
