@@ -1,6 +1,6 @@
 {
   "name": "react-otpify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A customizable and accessible OTP (One-Time Password) input component for React",
   "type": "module",
   "main": "dist/react-otpify.umd.js",
