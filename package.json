@@ -15,8 +15,7 @@
     "start": "vite --config vite.docs.config.js",
     "build": "npm run build:lib && npm run build:docs",
     "build:lib": "vite build",
-    "build:docs": "vite build --config vite.docs.config.js",
-    "deploy": "gh-pages -d dist-docs"
+    "build:docs": "vite build --config vite.docs.config.js"
   },
   "dependencies": {
     "react": "^18.0.0",
