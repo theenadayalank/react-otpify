@@ -22,10 +22,10 @@ jobs:
         run: npm install
 
       - name: Build documentation
-        run: npm run build-docs # Update this if your docs command differs
+        run: npm run build:docs
 
       - name: Deploy to Netlify
-        run: npx netlify deploy --prod --dir=./docs
+        run: npx netlify deploy --prod --dir=./dist-docs
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
