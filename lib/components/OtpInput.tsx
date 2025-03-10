@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import { OtpInputProps } from "../types";
-import "./OtpInput.css";
+import "./OtpInput.scss";
 
 const OtpInput = ({
   length = 6,

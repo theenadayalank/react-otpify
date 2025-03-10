@@ -1,0 +1,48 @@
+// Color Variables
+$otp-border-color: #ccc;
+$otp-focus-border-color: #007bff;
+$otp-error-border-color: #ff4d4f;
+$otp-background-color: #fff;
+$otp-disabled-background-color: #f5f5f5;
+
+.otp-input-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.otp-input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  border: 2px solid $otp-border-color;
+  border-radius: 4px;
+  background-color: $otp-background-color;
+  outline: none;
+  transition: border-color 0.3s ease;
+
+  &::placeholder {
+    color: $otp-border-color;
+  }
+}
+
+.otp-input:focus {
+  border-color: $otp-focus-border-color;
+}
+
+.otp-input.error {
+  border-color: $otp-error-border-color;
+}
+
+.otp-input:disabled {
+  background-color: $otp-disabled-background-color;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+
+.otp-input-container.error .otp-input {
+  border-color: $otp-error-border-color;
+}
