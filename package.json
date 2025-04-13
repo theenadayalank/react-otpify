@@ -1,7 +1,8 @@
 {
   "name": "react-otpify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A customizable and accessible OTP (One-Time Password) input component for React",
+  "homepage": "https://react-otpify.netlify.app/",
   "type": "module",
   "main": "dist/react-otpify.umd.js",
   "module": "dist/react-otpify.es.js",
@@ -42,6 +43,7 @@
     "globals": "^15.14.0",
     "husky": "^9.1.7",
     "lint-prepush": "^3.0.2",
+    "sass-embedded": "^1.85.1",
     "typescript": "^4.9.5",
     "typescript-eslint": "^8.24.1",
     "vite": "^4.0.0",
@@ -64,7 +66,6 @@
   "bugs": {
     "url": "https://github.com/theenadayalank/react-otpify/issues"
   },
-  "homepage": "https://github.com/theenadayalank/react-otpify#readme",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
